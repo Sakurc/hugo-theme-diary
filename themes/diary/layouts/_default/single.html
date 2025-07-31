@@ -32,11 +32,15 @@
                         </time>
                         {{ end }}
 
+                        {{/* --- 这是修正的部分 --- */}}
                         {{ if .Params.categories }}
                             <i class="material-icons" style="">folder</i>
-                                <a href="{{ "/categories/" | relLangURL }}{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
+                            {{ range .Params.categories }}
+                                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                                 &nbsp;
+                            {{ end }}
                         {{ end }}
+                        {{/* --- 修正结束 --- */}}
 
                         {{ if gt .Params.tags 0 }}
                             <i class="material-icons" style="">label</i>
