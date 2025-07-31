@@ -29,7 +29,7 @@ theme = "diary"
     tabWidth = 4
 
 [params]
-subtitle = "Rise's Blog"
+subtitle = ""
 enableGitalk = false
 enableGiscus = true
 
